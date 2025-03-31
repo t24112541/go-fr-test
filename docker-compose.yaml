@@ -1,0 +1,23 @@
+services:
+  redis:
+    image: bitnami/redis:latest
+    container_name: go-fr-redis
+    environment:
+      REDIS_PASSWORD: password
+      REDIS_MASTER_PASSWORD: access_deny
+    ports:
+      - 6379:6379
+
+  postgres:
+    image: postgres:16.2
+    container_name: go-fr-db
+    environment:
+      POSTGRES_DB: "test_db"
+      POSTGRES_USER: "go_fr_db_user"
+      POSTGRES_PASSWORD: "password"
+      PGDATA: /data/postgres
+      TZ: Asia/Bangkok
+
+    ports:
+      - 5433:5432
+    restart: always

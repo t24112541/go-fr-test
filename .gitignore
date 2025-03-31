@@ -1,0 +1,39 @@
+# Binaries for programs and plugins
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Output of the build process
+bin/
+build/
+
+# Dependency directories (for vendoring)
+vendor/
+
+# Go test binaries
+*.test
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+
+# Logs and debug files
+*.log
+*.out
+
+# Environment files
+.env
+
+# Docker-related files
+docker-compose.override.yaml
+
+# Cache and temporary files
+*.tmp
+*.cache
+*.bak
+
+# OS-specific files
+.DS_Store
+Thumbs.db
