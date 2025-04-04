@@ -7,6 +7,21 @@ toolchain go1.24.1
 require gofr.dev v1.36.0
 
 require (
+	github.com/cpuguy83/go-md2man/v2 v2.0.5 // indirect
+	github.com/fatih/color v1.18.0 // indirect
+	github.com/jinzhu/inflection v1.0.0 // indirect
+	github.com/mattn/go-colorable v0.1.14 // indirect
+	github.com/puzpuzpuz/xsync/v3 v3.5.1 // indirect
+	github.com/russross/blackfriday/v2 v2.1.0 // indirect
+	github.com/tmthrgd/go-hex v0.0.0-20190904060850-447a3041c3bc // indirect
+	github.com/uptrace/bun v1.2.11 // indirect
+	github.com/vmihailenco/msgpack/v5 v5.4.1 // indirect
+	github.com/vmihailenco/tagparser/v2 v2.0.0 // indirect
+	github.com/xrash/smetrics v0.0.0-20240521201337-686a1a2994c1 // indirect
+	golang.org/x/mod v0.23.0 // indirect
+)
+
+require (
 	cloud.google.com/go v0.119.0 // indirect
 	cloud.google.com/go/auth v0.15.0 // indirect
 	cloud.google.com/go/auth/oauth2adapt v0.2.7 // indirect
@@ -57,6 +72,10 @@ require (
 	github.com/remyoudompheng/bigfft v0.0.0-20230129092748-24d4a6f8daec // indirect
 	github.com/segmentio/kafka-go v0.4.47 // indirect
 	github.com/stretchr/testify v1.10.0 // indirect
+	github.com/uptrace/bun/dialect/mysqldialect v1.2.11
+	github.com/uptrace/bun/extra/bundebug v1.2.11
+	github.com/urfave/cli v1.22.16
+	github.com/urfave/cli/v2 v2.27.6
 	github.com/xdg-go/pbkdf2 v1.0.0 // indirect
 	github.com/xdg-go/scram v1.1.2 // indirect
 	github.com/xdg-go/stringprep v1.0.4 // indirect

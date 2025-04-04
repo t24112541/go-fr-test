@@ -17,7 +17,7 @@ func New(app *gofr.App) *routerResource {
 
 func (r *routerResource) RegisterRoutes() {
 	// AddRESTHandlers creates CRUD handles for the given entity
-	err := r.app.AddRESTHandlers(&models.CustomerEntity{})
+	err := r.app.AddRESTHandlers(&models.Book{})
 	if err != nil {
 		return
 	}

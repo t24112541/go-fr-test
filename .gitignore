@@ -24,7 +24,7 @@ vendor/
 *.out
 
 # Environment files
-.env
+# .env
 
 # Docker-related files
 docker-compose.override.yaml

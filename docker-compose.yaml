@@ -7,12 +7,13 @@ services:
       REDIS_MASTER_PASSWORD: access_deny
     ports:
       - 6379:6379
+    restart: always
 
   postgres:
     image: postgres:16.2
-    container_name: go-fr-db
+    container_name: go-fr-postgres
     environment:
-      POSTGRES_DB: "test_db"
+      POSTGRES_DB: "go_fr_test"
       POSTGRES_USER: "go_fr_db_user"
       POSTGRES_PASSWORD: "password"
       PGDATA: /data/postgres
@@ -20,4 +21,34 @@ services:
 
     ports:
       - 5433:5432
+    restart: always
+
+  mysql:
+    container_name: go-fr-mysql
+    image: mysql:8.0
+    volumes:
+      - ./db/initdb/:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_DATABASE: go_fr_test
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_USER: go_fr_db_user
+      MYSQL_PASSWORD: password
+      TZ: Asia/Bangkok
+    ports:
+      - 3306:3306
+    restart: always
+
+  maria:
+    container_name: go-fr-maria
+    image: mariadb:10.7.8
+    volumes:
+      - ./db/initdb/:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_DATABASE: go_fr_test
+      MARIADB_ROOT_PASSWORD: password
+      MYSQL_USER: go_fr_db_user
+      MYSQL_PASSWORD: password
+      TZ: Asia/Bangkok
+    ports:
+      - 3306:3306
     restart: always
