@@ -1,3 +1,5 @@
+# test GoFR + Bun
+
 # run mode (!windows)
 ``` bash
 APP_ENV=dev go run main.go
