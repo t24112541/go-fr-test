@@ -14,6 +14,7 @@ type Book struct {
 	CreatedAt time.Time `bun:",nullzero,notnull,default:current_timestamp"`
 	UpdatedAt time.Time `bun:",nullzero,notnull,default:current_timestamp"`
 	DeletedAt time.Time `bun:",soft_delete"`
+	Users     []*User   `bun:"m2m:user_books,join:Book=User"`
 }
 
 func (u *Book) RestPath() string {

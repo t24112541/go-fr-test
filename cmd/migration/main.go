@@ -16,7 +16,9 @@ func main() {
 	ctx := context.Background()
 
 	conn := datasource.New(app, ctx)
+
 	db := conn.RegisterDatasource()
+	defer db.Close()
 
 	bunMigrate := migrate.NewMigrator(db, migrations.Migrations)
 

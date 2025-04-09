@@ -37,3 +37,4 @@ docker-compose.override.yaml
 # OS-specific files
 .DS_Store
 Thumbs.db
+tmp
